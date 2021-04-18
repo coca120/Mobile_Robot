@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="mobilerobot_test">
+  <link
+    name="base_footprint_link">
+    <inertial>
+      <origin
+        xyz="-0.00342138200196307 1.18433650386773E-07 0.0962459810585744"
+        rpy="0 0 0" />
+      <mass
+        value="2.76738314776389" />
+      <inertia
+        ixx="0.00779782419868002"
+        ixy="-4.63077941010442E-10"
+        ixz="-2.98575725775352E-16"
+        iyy="0.00827012191949827"
+        iyz="-1.98598732945032E-16"
+        izz="0.0134961317704578" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobilerobot_test/meshes/base_footprint_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobilerobot_test/meshes/base_footprint_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.00342138200196324 1.18433650553307E-07 0.0536996228356946"
+        rpy="0 0 0" />
+      <mass
+        value="2.76738314776389" />
+      <inertia
+        ixx="0.00779782419868001"
+        ixy="-4.63077940576762E-10"
+        ixz="-2.98623159620398E-16"
+        iyy="0.00827012191949826"
+        iyz="-1.9860550920861E-16"
+        izz="0.0134961317704578" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobilerobot_test/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobilerobot_test/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_link_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0.042546"
+      rpy="0 0 0" />
+    <parent
+      link="base_footprint_link" />
+    <child
+      link="base_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="lw_link">
+    <inertial>
+      <origin
+        xyz="-3.88578058618805E-16 0.0240000000000312 -2.17881268582687E-15"
+        rpy="0 0 0" />
+      <mass
+        value="0.655503307258326" />
+      <inertia
+        ixx="0.000923008630552075"
+        ixy="-7.15573433840433E-18"
+        ixz="-7.28448334638698E-20"
+        iyy="0.00167949926758436"
+        iyz="4.46386363203016E-19"
+        izz="0.000923008630552075" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobilerobot_test/meshes/lw_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobilerobot_test/meshes/lw_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lw_joint"
+    type="continuous">
+    <origin
+      xyz="0.028202 -0.175 0.033"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="lw_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="rw_link">
+    <inertial>
+      <origin
+        xyz="-5.29021271233887E-14 -0.0240000000000039 3.87884169228414E-15"
+        rpy="0 0 0" />
+      <mass
+        value="0.655503307258327" />
+      <inertia
+        ixx="0.000923008630552077"
+        ixy="-6.93889390390723E-18"
+        ixz="-6.69156028330897E-20"
+        iyy="0.00167949926758436"
+        iyz="5.17537130772378E-19"
+        izz="0.000923008630552076" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobilerobot_test/meshes/rw_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobilerobot_test/meshes/rw_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rw_joint"
+    type="continuous">
+    <origin
+      xyz="0.028202 0.175 0.033"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="rw_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="caster_top_link">
+    <inertial>
+      <origin
+        xyz="-0.00232207504166007 0.000325935672784605 -0.00822831347859176"
+        rpy="0 0 0" />
+      <mass
+        value="0.00368528325250998" />
+      <inertia
+        ixx="3.66795122786808E-07"
+        ixy="4.43309581598519E-09"
+        ixz="-1.26581058615969E-07"
+        iyy="3.97755737172492E-07"
+        iyz="1.77674199849672E-08"
+        izz="2.9920756716578E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobilerobot_test/meshes/caster_top_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobilerobot_test/meshes/caster_top_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster_top_joint"
+    type="continuous">
+    <origin
+      xyz="-0.14035 0 0.015"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="caster_top_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="caster_bottom_link">
+    <inertial>
+      <origin
+        xyz="0.00125101209725378 0.00891262973159579 -6.93889390390723E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.0181447860110378" />
+      <inertia
+        ixx="2.78326117490192E-06"
+        ixy="3.34111375601163E-07"
+        ixz="-2.38228016415272E-22"
+        iyy="5.1166854660164E-06"
+        iyz="-2.67344773977139E-21"
+        izz="2.73636397561343E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobilerobot_test/meshes/caster_bottom_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobilerobot_test/meshes/caster_bottom_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster_bottom_joint"
+    type="continuous">
+    <origin
+      xyz="-0.15995 -0.0063367 -0.018546"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="caster_bottom_link" />
+    <axis
+      xyz="-0.139 -0.99029 0" />
+  </joint>
+</robot>
